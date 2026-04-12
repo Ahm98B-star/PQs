@@ -57,7 +57,8 @@
             background-color: var(--bg-color);
             color: var(--text-primary);
             min-height: 100vh;
-            overflow: hidden; /* Prevent scrolling on main body for app-like feel */
+            overflow-x: hidden;
+            overflow-y: auto;
             line-height: 1.6;
             transition: background-color 0.5s ease, color 0.5s ease;
         }
@@ -178,7 +179,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 1rem 1.5rem 120px; /* space for dock */
+            padding: 1rem 1.25rem 130px; /* space for dock */
             gap: 1.5rem;
             z-index: 10;
             position: relative;
@@ -201,7 +202,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 3.5rem 2.5rem;
+            padding: 4rem 2rem;
             position: relative;
             animation: cardEnter 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
@@ -249,10 +250,10 @@
         .ai-badge i { width: 14px; height: 14px; }
 
         .question-text {
-            font-size: 1.8rem;
+            font-size: 1.45rem;
             font-family: 'Noto Sans Arabic', sans-serif;
             font-weight: 800;
-            line-height: 1.5;
+            line-height: 1.6;
             color: var(--text-primary);
             word-wrap: break-word;
             text-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -522,6 +523,7 @@
         @media (min-width: 768px) {
             #root { max-width: 600px; }
             .question-text { font-size: 2.2rem; }
+            .question-card { padding: 5rem 3.5rem; }
         }
     </style>
 </head>
